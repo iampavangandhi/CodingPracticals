@@ -1,16 +1,9 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-void tower(int ,char,char,char);
-int main()
-{
-    cout<<"Enter the number of discs "<<endl;
-    int n;
-    cin>>n;
-    tower(n,'A','C','B');
-    cout<<"toal number of steps "<<(pow(2,n)-1)<<endl;
-    
-}
+
+//Recursive function to solve tower of hanoi
+
 void tower(int n, char from, char to, char aux)
 {
     
@@ -26,5 +19,17 @@ void tower(int n, char from, char to, char aux)
     cout<<"Move "<<n<<" From "<<from<<" to "<<to<<endl;
     tower(n-1,aux,to,from);
     }
+    
+}
+
+//Driver code 
+
+int main()
+{
+    cout<<"Enter the number of discs "<<endl;
+    int n;
+    cin>>n;
+    tower(n,'A','C','B');
+    cout<<"toal number of steps "<<(pow(2,n)-1)<<endl;
     
 }
