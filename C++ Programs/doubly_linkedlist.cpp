@@ -11,7 +11,7 @@ class doublylist
 private:
 	node *head,*tail;
 public:
-	doublylist()
+	doublylist() // Constructor initializes list head and tail
 	{
 		head=NULL;
 		tail=NULL;
@@ -78,7 +78,7 @@ void deleteEnd()
    else
    {
       node *temp = head;
-      if(temp->prev == temp->next)
+      if(temp->prev == temp->next) // Leaf Node
       {
          head = NULL;
          delete temp;
@@ -106,9 +106,8 @@ void insert_specified(int item)
        cin>>loc;   
        temp=head;  
        for(int i=0;i<loc;i++)  
-       {  
            temp = temp->next;   
-       }  
+       // Insert element and Modify list as required.
        ptr->data = item;  
        ptr->next = temp->next;  
        ptr -> prev = temp;  
@@ -151,38 +150,34 @@ void deleteFromN(int position)
 {
     node *current;
     current = head;
-    for(int i=1; i<position && current!=NULL; i++)
-    {
-        current = current->next;
-    }
-    if(position == 0)
-    {
+
+    if(position == 0) // Head element removal
        deleteBeginning();
-    }
-    else if(current != NULL)
-    {
-        current->prev->next = current->next;
-        current->next->prev = current->prev;
-        delete current; 
-        cout<<"SUCCESSFULLY DELETED NODE FROM POSITION.\n";
-    }
-    else
-    {
-        cout<<"Invalid position!\n";
-    }
+   	else {
+	    for(int i=1; i < position && current!=NULL; i++) // Traverse list to required position, as long as it hasn't ended.
+	        current = current->next;
+
+	    if(current != NULL) // Removal from middle of list
+	    {
+	        current->prev->next = current->next;
+	        current->next->prev = current->prev;
+	        delete current; 
+	        cout<<"SUCCESSFULLY DELETED NODE FROM POSITION.\n";
+	    }
+	    else cout<<"Invalid position!\n";
+	}
 }
 void reverse()
 {
     node *current = head;
     node *temp = NULL;
-    while(current!=NULL)
+    while(current!=NULL) // Iteratively swap elements to reverse list
     {
       temp = current->prev;   //swap the next and prev pointer
       current->prev = current->next;
       current->next = temp;
       current = current->prev;
     }
-    temp->prev;
     cout<<"LIST REVERSED SUCCESSFULLY.\n";
 }
  void display()  
@@ -190,7 +185,7 @@ void reverse()
     node *ptr;  
     cout<<"printing values"<<endl;  
     ptr = head;  
-    while(ptr != NULL)  
+    while(ptr != NULL)  // Display elements and traverse till end of list reached.
     {  
         cout<<ptr->data<<"->"<<" ";  
         ptr=ptr->next;  
