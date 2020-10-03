@@ -3,14 +3,11 @@ using namespace std;
 
 int multiply(int x ,int y)
 {
-	if(y==0){
+	if(y==0)
 		return 0;
-	}
 	
-	if(y<0){
+	if(y < 0) // For negative number;
 		return -multiply(x,-y);
-		//For Negative Number
-	}
 	
 	return(x + multiply(x, y-1));
 }
