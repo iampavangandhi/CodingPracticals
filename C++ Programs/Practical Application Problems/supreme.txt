@@ -1,0 +1,30 @@
+
+----------------------------------------------------
+----------------------------------------------------
+
+NAME : raju
+GENDER : m
+CATEGORY : gen
+STREAM : sci
+
+ENGLISH MARKS - 99
+HINDI / 2nd SUB MARKS - 90
+PHY / ACC /GEO MARKS - 0
+CHEM / ECO / HIS MARKS - 1981223266
+MATH / BUSS.ST. / POL.Sc MARKS - 4247597
+PERCENTAGE : 4.96368e+008 %
+
+----------------------------------------------------
+----------------------------------------------------
+
+NAME : pavan gandhi
+GENDER : m
+CATEGORY : gen
+STREAM : sci
+
+ENGLISH MARKS - 22
+HINDI / 2nd SUB MARKS - 33
+PHY / ACC /GEO MARKS - 44
+CHEM / ECO / HIS MARKS - 55
+MATH / BUSS.ST. / POL.Sc MARKS - 44
+PERCENTAGE : 41 %

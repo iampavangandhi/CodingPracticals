@@ -1,0 +1,12 @@
+ List of Courses are :
+
+1. Batchlor of Science { MATHS(H) }
+2. Batchlor of Science { COMPUTER SCIENCE(H) }
+3. Batchlor of Science { STASTICS(H) }
+4. Batchlor of Commerce { Bcom(Pro) }
+5. Batchlor of Commerce { Bcom(H) }
+6. Batchlor of ARTS { English(H) }
+7. Batchlor of ARTS { Hindi(H) }
+8. Batchlor of ARTS { History(H) }
+9. Batchlor of ARTS { Economics(H) }
+10 Batchlor of ARTS { Psycology(H) }
