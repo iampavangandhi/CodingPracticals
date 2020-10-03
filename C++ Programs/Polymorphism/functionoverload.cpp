@@ -1,7 +1,9 @@
+// Program to understand Function overloading in cpp
 #include <iostream>
 
 using namespace std;
 
+// A class which is capable of calculating areas in multiple formats
 class Rectangle
 {
 	public:

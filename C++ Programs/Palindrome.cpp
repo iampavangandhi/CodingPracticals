@@ -8,12 +8,12 @@ int main()
 	cout<<"ENTER A NUMBER YOU WANNA CHECK ";
 	cin>>num;
 	a=num;
-	while(num>0)
-{
-	y=num%10;
-	z=z*10+y;
-	num=num/10;
-}
+	// Loop to Reverse y and storing the result to z 
+	while(num>0){
+	y=num%10; // Accessing the digit at units place
+	z=z*10+y; // Appending to z	
+	num=num/10; 
+	}
 	if(a==z)
 	cout<<z<<" is Palindrome";
 	else
