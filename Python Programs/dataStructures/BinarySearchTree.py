@@ -1,3 +1,8 @@
+"""
+A binary tree is a data structure with two child nodes
+refer : https://en.wikipedia.org/wiki/Binary_tree
+"""
+
 class BinaryTree:
     """
     Class object for binary tree
@@ -6,6 +11,9 @@ class BinaryTree:
     def __init__(self, element: int):
         """
         Create a node with element, have no child nodes
+
+        >>>newNode1 = BinaryTree(4)
+        >>>newNode2 = BinaryTree(5)
         """
         self.data = element
         self.left = None
@@ -14,6 +22,9 @@ class BinaryTree:
     def add(self, element :int) -> None:
         """
         Adds element to the tree
+
+        >>>node.add(4)
+        >>>node.add(5)
         """
         if element < self.data:
             # insert at left child
@@ -31,6 +42,10 @@ class BinaryTree:
     def max(self) -> int:
         """
         Finds the maximum element from the tree
+
+        >>>element = node.max()
+        >>>print(node.max())
+
         """
         if self.right is not None:
             return self.right.max()
@@ -40,6 +55,10 @@ class BinaryTree:
     def min(self) -> int:
         """
         Finds the minimum element from the tree
+
+        >>>element = node.min()
+        >>>print(node.min())
+
         """
         if self.left is not None:
             return self.left.min()
@@ -50,6 +69,10 @@ class BinaryTree:
         """
         Removes element from the tree if found
         returns new tree
+
+        >>> node1 = node1.remove(4)
+        >>> node2 = node2.remove(4)
+
         """
         if self.data == element:
             #this node has to be removed
@@ -75,6 +98,10 @@ class BinaryTree:
         """
         Returns true if element is found in tree
         Else returns false
+
+        >>>if node.search(4):
+               print("4 found!")
+
         """
         if self.data == element:
             return True
@@ -92,6 +119,9 @@ class BinaryTree:
     def inOrder(self) -> None:
         """
         InOrder traversal : left -> current -> right
+
+        >>>node.inOrder()
+        1 2 3
         """
         if self.left is not None:
             self.left.inOrder()
@@ -102,6 +132,9 @@ class BinaryTree:
     def preOrder(self) -> None:
         """
         PreOrder traversal : current -> left -> right
+
+        >>>node.preOrder()
+        2 1 3
         """
         print(f"{self.data} ", end=" ")
         if self.left is not None:
@@ -112,6 +145,9 @@ class BinaryTree:
     def postOrder(self) -> None:
         """
         PostOrder traversal : left -> right -> current
+
+        >>>node.postOrder()
+        1 3 2
         """
         if self.left is not None:
             self.left.inOrder()
@@ -123,6 +159,13 @@ class BinaryTree:
         """
         Returns the string representation of node
         Node( data, left, right )
+
+        >>>print(node1)
+        Node(4, left , None )
+        >>>print(node2)
+        Node(2, None , right )
+        >>>print(node3)
+        Node(3, None , None )
         """
         string = f"Node( {self.data}, "
         if self.left is not None:
@@ -138,6 +181,10 @@ class BinaryTree:
 
 
 if __name__ == "__main__":
+    """
+    Sample operation on binary tree
+    """
+    
     values = [5,8,2,7,1,9,3,4,6]
 
     BST = BinaryTree(values[0])
@@ -165,7 +212,7 @@ if __name__ == "__main__":
         print(f"Element {element} is not found")
 
     print(f"Removing {element}")
-    BST.remove(element)
+    BST = BST.remove(element)
 
     if BST.search(element):
         print(f"Element {element} is found")
