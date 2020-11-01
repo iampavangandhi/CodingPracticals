@@ -1,3 +1,3 @@
 # CodingPracticals
 
-Basic Coding Practical Questions of C++, Java, and Python.
+Coding Practical Questions of C++, Java, and Python.
